@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
-    /// Specifies the contract for a collection of service descriptors.
+    /// 指定一个服务描述集合的契约。
     /// </summary>
     public interface IServiceCollection : IList<ServiceDescriptor>
     {

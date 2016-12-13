@@ -34,7 +34,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// 使用服务描述的集合初始化 <see cref="ServiceProvider"/> 类的新实例。
         /// </summary>
         /// <param name="serviceDescriptors">服务描述的集合。</param>
-        /// <param name="validateScopes">?</param>
+        /// <param name="validateScopes">是否验证作用域。</param>
         public ServiceProvider(IEnumerable<ServiceDescriptor> serviceDescriptors, bool validateScopes)
         {
             Root = this;
