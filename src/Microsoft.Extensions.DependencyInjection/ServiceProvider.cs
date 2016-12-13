@@ -13,7 +13,7 @@ using Microsoft.Extensions.DependencyInjection.ServiceLookup;
 namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
-    /// The default IServiceProvider.
+    /// <see cref="IServiceProvider"/> 的默认实现。
     /// </summary>
     internal class ServiceProvider : IServiceProvider, IDisposable
     {
@@ -30,6 +30,11 @@ namespace Microsoft.Extensions.DependencyInjection
         // CallSiteRuntimeResolver is stateless so can be shared between all instances
         private static readonly CallSiteRuntimeResolver _callSiteRuntimeResolver = new CallSiteRuntimeResolver();
 
+        /// <summary>
+        /// 使用服务描述的集合初始化 <see cref="ServiceProvider"/> 类的新实例。
+        /// </summary>
+        /// <param name="serviceDescriptors">服务描述的集合。</param>
+        /// <param name="validateScopes">?</param>
         public ServiceProvider(IEnumerable<ServiceDescriptor> serviceDescriptors, bool validateScopes)
         {
             Root = this;
@@ -46,7 +51,11 @@ namespace Microsoft.Extensions.DependencyInjection
             _table.Add(typeof(IEnumerable<>), new OpenIEnumerableService(_table));
         }
 
-        // This constructor is called exclusively to create a child scope from the parent
+        /// <summary>
+        /// <para>使用父服务提供者初始化 ServiceProvider 类的新实例。</para>
+        /// <para>这个构造函数被调用，专门用来从父服务提供者创建一个子范围。</para>
+        /// </summary>
+        /// <param name="parent">父服务提供者。</param>
         internal ServiceProvider(ServiceProvider parent)
         {
             Root = parent.Root;
@@ -55,10 +64,11 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Gets the service object of the specified type.
+        /// 获取指定类型的服务对象。
+        /// <see cref="IServiceProvider.GetService(Type)"/> 的实现。
         /// </summary>
-        /// <param name="serviceType"></param>
-        /// <returns></returns>
+        /// <param name="serviceType">要获取服务对象的类型。</param>
+        /// <returns>指定类型的服务对象。</returns>
         public object GetService(Type serviceType)
         {
             var realizedService = _table.RealizedServices.GetOrAdd(serviceType, _createServiceAccessor, this);

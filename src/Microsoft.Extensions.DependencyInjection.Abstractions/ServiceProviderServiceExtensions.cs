@@ -8,16 +8,16 @@ using Microsoft.Extensions.DependencyInjection.Abstractions;
 namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
-    /// Extension methods for getting services from an <see cref="IServiceProvider" />.
+    /// 从 <see cref="IServiceProvider" /> 获取服务的扩展方法。
     /// </summary>
     public static class ServiceProviderServiceExtensions
     {
         /// <summary>
-        /// Get service of type <typeparamref name="T"/> from the <see cref="IServiceProvider"/>.
+        /// 从 <see cref="IServiceProvider"/> 获取 <typeparamref name="T"/> 类型的服务。
         /// </summary>
-        /// <typeparam name="T">The type of service object to get.</typeparam>
-        /// <param name="provider">The <see cref="IServiceProvider"/> to retrieve the service object from.</param>
-        /// <returns>A service object of type <typeparamref name="T"/> or null if there is no such service.</returns>
+        /// <typeparam name="T">要获取服务对象的类型。</typeparam>
+        /// <param name="provider">从中取回服务对象的 <see cref="IServiceProvider"/>。</param>
+        /// <returns>类型为 <typeparamref name="T"/> 的服务对象或空引用（<c>null</c>，当没有找到服务时）。</returns>
         public static T GetService<T>(this IServiceProvider provider)
         {
             if (provider == null)
@@ -29,12 +29,12 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Get service of type <paramref name="serviceType"/> from the <see cref="IServiceProvider"/>.
+        /// 从 <see cref="IServiceProvider"/> 获取 <paramref name="serviceType"/> 类型的服务。
         /// </summary>
-        /// <param name="provider">The <see cref="IServiceProvider"/> to retrieve the service object from.</param>
-        /// <param name="serviceType">An object that specifies the type of service object to get.</param>
-        /// <returns>A service object of type <paramref name="serviceType"/>.</returns>
-        /// <exception cref="System.InvalidOperationException">There is no service of type <paramref name="serviceType"/>.</exception>
+        /// <param name="provider">从中取回服务对象的 <see cref="IServiceProvider"/>。</param>
+        /// <param name="serviceType">要获取服务对象的类型。</param>
+        /// <returns>类型为 <paramref name="serviceType"/> 的服务对象。</returns>
+        /// <exception cref="System.InvalidOperationException">当找不到 <paramref name="serviceType"/> 类型的服务时引发。</exception>
         public static object GetRequiredService(this IServiceProvider provider, Type serviceType)
         {
             if (provider == null)
@@ -63,12 +63,12 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Get service of type <typeparamref name="T"/> from the <see cref="IServiceProvider"/>.
+        /// 从 <see cref="IServiceProvider"/> 获取 <typeparamref name="T"/> 类型的服务。
         /// </summary>
-        /// <typeparam name="T">The type of service object to get.</typeparam>
-        /// <param name="provider">The <see cref="IServiceProvider"/> to retrieve the service object from.</param>
-        /// <returns>A service object of type <typeparamref name="T"/>.</returns>
-        /// <exception cref="System.InvalidOperationException">There is no service of type <typeparamref name="T"/>.</exception>
+        /// <typeparam name="T">要获取服务对象的类型。</typeparam>
+        /// <param name="provider">从中取回服务对象的 <see cref="IServiceProvider"/>。</param>
+        /// <returns>类型为 <typeparamref name="T"/> 的服务对象。</returns>
+        /// <exception cref="System.InvalidOperationException">当找不到 <typeparamref name="T"/> 类型的服务时引发。</exception>
         public static T GetRequiredService<T>(this IServiceProvider provider)
         {
             if (provider == null)
@@ -80,11 +80,11 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Get an enumeration of services of type <typeparamref name="T"/> from the <see cref="IServiceProvider"/>.
+        /// 从 <see cref="IServiceProvider"/> 获取 <typeparamref name="T"/> 类型的服务构成的可枚举数。
         /// </summary>
-        /// <typeparam name="T">The type of service object to get.</typeparam>
-        /// <param name="provider">The <see cref="IServiceProvider"/> to retrieve the services from.</param>
-        /// <returns>An enumeration of services of type <typeparamref name="T"/>.</returns>
+        /// <typeparam name="T">要获取服务对象的类型。</typeparam>
+        /// <param name="provider">从中取回服务对象的 <see cref="IServiceProvider"/>。</param>
+        /// <returns>类型为 <typeparamref name="T"/> 的服务构成的枚举数。</returns>
         public static IEnumerable<T> GetServices<T>(this IServiceProvider provider)
         {
             if (provider == null)
@@ -96,11 +96,11 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Get an enumeration of services of type <paramref name="serviceType"/> from the <see cref="IServiceProvider"/>.
+        /// 从 <see cref="IServiceProvider"/> 获取 <paramref name="serviceType"/> 类型的服务构成的可枚举数。
         /// </summary>
-        /// <param name="provider">The <see cref="IServiceProvider"/> to retrieve the services from.</param>
-        /// <param name="serviceType">An object that specifies the type of service object to get.</param>
-        /// <returns>An enumeration of services of type <paramref name="serviceType"/>.</returns>
+        /// <param name="provider">从中取回服务对象的 <see cref="IServiceProvider"/>。</param>
+        /// <param name="serviceType">要获取服务对象的类型。</param>
+        /// <returns>类型为 <paramref name="serviceType"/> 的服务构成的枚举数。</returns>
         public static IEnumerable<object> GetServices(this IServiceProvider provider, Type serviceType)
         {
             if (provider == null)
@@ -118,10 +118,10 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Creates a new <see cref="IServiceScope"/> that can be used to resolve scoped services.
+        /// 创建一个 <see cref="IServiceScope"/>，它可以用来解析范围服务。
         /// </summary>
-        /// <param name="provider">The <see cref="IServiceProvider"/> to create the scope from.</param>
-        /// <returns>A <see cref="IServiceScope"/> that can be used to resolve scoped services.</returns>
+        /// <param name="provider">从中创建范围的 <see cref="IServiceProvider"/>。</param>
+        /// <returns>可以被用来解析范围服务的 <see cref="IServiceScope"/>。</returns>
         public static IServiceScope CreateScope(this IServiceProvider provider)
         {
             return provider.GetRequiredService<IServiceScopeFactory>().CreateScope();
