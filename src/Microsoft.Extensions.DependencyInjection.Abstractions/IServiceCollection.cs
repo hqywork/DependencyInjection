@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
-    /// Ö¸¶¨Ò»¸ö·şÎñÃèÊö¼¯ºÏµÄÆõÔ¼¡£
+    /// æŒ‡å®šä¸€ä¸ªæœåŠ¡æè¿°é›†åˆçš„å¥‘çº¦ã€‚
     /// </summary>
     public interface IServiceCollection : IList<ServiceDescriptor>
     {

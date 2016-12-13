@@ -6,16 +6,16 @@ using System;
 namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
-    /// ÓÃÓÚ¹¹Ôì·şÎñÈİÆ÷£¨<see cref="IServiceProvider"/>£© µÄ <see cref="IServiceCollection"/> À©Õ¹·½·¨¡£
+    /// ç”¨äºæ„é€ æœåŠ¡å®¹å™¨ï¼ˆ<see cref="IServiceProvider"/>ï¼‰ çš„ <see cref="IServiceCollection"/> æ‰©å±•æ–¹æ³•ã€‚
     /// </summary>
     public static class ServiceCollectionContainerBuilderExtensions
     {
         /// <summary>
-        /// ´Ó <see cref="IServiceCollection"/> ´´½¨Ò»¸ö <see cref="IServiceProvider"/> ÈİÆ÷·şÎñ¡£
+        /// ä» <see cref="IServiceCollection"/> åˆ›å»ºä¸€ä¸ª <see cref="IServiceProvider"/> å®¹å™¨æœåŠ¡ã€‚
         /// 
         /// </summary>
-        /// <param name="services">°üº¬·şÎñÃèÊöµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <returns><see cref="IServiceProvider"/> ·şÎñÈİÆ÷¡£</returns>
+        /// <param name="services">åŒ…å«æœåŠ¡æè¿°çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <returns><see cref="IServiceProvider"/> æœåŠ¡å®¹å™¨ã€‚</returns>
 
         public static IServiceProvider BuildServiceProvider(this IServiceCollection services)
         {
@@ -23,14 +23,14 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// ´Ó <see cref="IServiceCollection"/> ´´½¨Ò»¸ö <see cref="IServiceProvider"/> ÈİÆ÷·şÎñ¡£
-        /// ¿ÉÑ¡ÔñÊÇ·ñÆôÓÃ×÷ÓÃÓòÑéÖ¤¡£
+        /// ä» <see cref="IServiceCollection"/> åˆ›å»ºä¸€ä¸ª <see cref="IServiceProvider"/> å®¹å™¨æœåŠ¡ã€‚
+        /// å¯é€‰æ‹©æ˜¯å¦å¯ç”¨ä½œç”¨åŸŸéªŒè¯ã€‚
         /// </summary>
-        /// <param name="services">°üº¬·şÎñÃèÊöµÄ <see cref="IServiceCollection"/>¡£</param>
+        /// <param name="services">åŒ…å«æœåŠ¡æè¿°çš„ <see cref="IServiceCollection"/>ã€‚</param>
         /// <param name="validateScopes">
-        /// Èç¹û×÷ÓÃÓò·şÎñ²»ÄÜ´Ó¸ùÌá¹©Õß½âÎöÔò·µ»ØÕæ£¨<c>true</c>£©£»·ñÔò·µ»Ø¼Ù£¨<c>false</c>£©.
+        /// å¦‚æœä½œç”¨åŸŸæœåŠ¡ä¸èƒ½ä»æ ¹æä¾›è€…è§£æåˆ™è¿”å›çœŸï¼ˆ<c>true</c>ï¼‰ï¼›å¦åˆ™è¿”å›å‡ï¼ˆ<c>false</c>ï¼‰.
         /// </param>
-        /// <returns><see cref="IServiceProvider"/> ·şÎñÈİÆ÷¡£</returns>
+        /// <returns><see cref="IServiceProvider"/> æœåŠ¡å®¹å™¨ã€‚</returns>
         public static IServiceProvider BuildServiceProvider(this IServiceCollection services, bool validateScopes)
         {
             return new ServiceProvider(services, validateScopes);

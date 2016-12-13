@@ -7,7 +7,7 @@ using System.Collections.Generic;
 namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
-    /// Default implementation of <see cref="IServiceCollection"/>.
+    /// <see cref="IServiceCollection"/> 的默认实现。
     /// </summary>
     public class ServiceCollection : IServiceCollection
     {

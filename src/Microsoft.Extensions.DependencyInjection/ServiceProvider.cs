@@ -13,7 +13,7 @@ using Microsoft.Extensions.DependencyInjection.ServiceLookup;
 namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
-    /// <see cref="IServiceProvider"/> µÄÄ¬ÈÏÊµÏÖ¡£
+    /// <see cref="IServiceProvider"/> çš„é»˜è®¤å®ç°ã€‚
     /// </summary>
     internal class ServiceProvider : IServiceProvider, IDisposable
     {
@@ -31,10 +31,10 @@ namespace Microsoft.Extensions.DependencyInjection
         private static readonly CallSiteRuntimeResolver _callSiteRuntimeResolver = new CallSiteRuntimeResolver();
 
         /// <summary>
-        /// Ê¹ÓÃ·şÎñÃèÊöµÄ¼¯ºÏ³õÊ¼»¯ <see cref="ServiceProvider"/> ÀàµÄĞÂÊµÀı¡£
+        /// ä½¿ç”¨æœåŠ¡æè¿°çš„é›†åˆåˆå§‹åŒ– <see cref="ServiceProvider"/> ç±»çš„æ–°å®ä¾‹ã€‚
         /// </summary>
-        /// <param name="serviceDescriptors">·şÎñÃèÊöµÄ¼¯ºÏ¡£</param>
-        /// <param name="validateScopes">ÊÇ·ñÑéÖ¤×÷ÓÃÓò¡£</param>
+        /// <param name="serviceDescriptors">æœåŠ¡æè¿°çš„é›†åˆã€‚</param>
+        /// <param name="validateScopes">æ˜¯å¦éªŒè¯ä½œç”¨åŸŸã€‚</param>
         public ServiceProvider(IEnumerable<ServiceDescriptor> serviceDescriptors, bool validateScopes)
         {
             Root = this;
@@ -52,10 +52,10 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// <para>Ê¹ÓÃ¸¸·şÎñÌá¹©Õß³õÊ¼»¯ ServiceProvider ÀàµÄĞÂÊµÀı¡£</para>
-        /// <para>Õâ¸ö¹¹Ôìº¯Êı±»µ÷ÓÃ£¬×¨ÃÅÓÃÀ´´Ó¸¸·şÎñÌá¹©Õß´´½¨Ò»¸ö×Ó·¶Î§¡£</para>
+        /// <para>ä½¿ç”¨çˆ¶æœåŠ¡æä¾›è€…åˆå§‹åŒ– ServiceProvider ç±»çš„æ–°å®ä¾‹ã€‚</para>
+        /// <para>è¿™ä¸ªæ„é€ å‡½æ•°è¢«è°ƒç”¨ï¼Œä¸“é—¨ç”¨æ¥ä»çˆ¶æœåŠ¡æä¾›è€…åˆ›å»ºä¸€ä¸ªå­èŒƒå›´ã€‚</para>
         /// </summary>
-        /// <param name="parent">¸¸·şÎñÌá¹©Õß¡£</param>
+        /// <param name="parent">çˆ¶æœåŠ¡æä¾›è€…ã€‚</param>
         internal ServiceProvider(ServiceProvider parent)
         {
             Root = parent.Root;
@@ -64,11 +64,11 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// »ñÈ¡Ö¸¶¨ÀàĞÍµÄ·şÎñ¶ÔÏó¡£
-        /// <see cref="IServiceProvider.GetService(Type)"/> µÄÊµÏÖ¡£
+        /// è·å–æŒ‡å®šç±»å‹çš„æœåŠ¡å¯¹è±¡ã€‚
+        /// <see cref="IServiceProvider.GetService(Type)"/> çš„å®ç°ã€‚
         /// </summary>
-        /// <param name="serviceType">Òª»ñÈ¡·şÎñ¶ÔÏóµÄÀàĞÍ¡£</param>
-        /// <returns>Ö¸¶¨ÀàĞÍµÄ·şÎñ¶ÔÏó¡£</returns>
+        /// <param name="serviceType">è¦è·å–æœåŠ¡å¯¹è±¡çš„ç±»å‹ã€‚</param>
+        /// <returns>æŒ‡å®šç±»å‹çš„æœåŠ¡å¯¹è±¡ã€‚</returns>
         public object GetService(Type serviceType)
         {
             var realizedService = _table.RealizedServices.GetOrAdd(serviceType, _createServiceAccessor, this);

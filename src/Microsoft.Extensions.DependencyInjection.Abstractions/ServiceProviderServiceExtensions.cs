@@ -8,16 +8,16 @@ using Microsoft.Extensions.DependencyInjection.Abstractions;
 namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
-    /// ´Ó <see cref="IServiceProvider" /> »ñÈ¡·şÎñµÄÀ©Õ¹·½·¨¡£
+    /// ä» <see cref="IServiceProvider" /> è·å–æœåŠ¡çš„æ‰©å±•æ–¹æ³•ã€‚
     /// </summary>
     public static class ServiceProviderServiceExtensions
     {
         /// <summary>
-        /// ´Ó <see cref="IServiceProvider"/> »ñÈ¡ <typeparamref name="T"/> ÀàĞÍµÄ·şÎñ¡£
+        /// ä» <see cref="IServiceProvider"/> è·å– <typeparamref name="T"/> ç±»å‹çš„æœåŠ¡ã€‚
         /// </summary>
-        /// <typeparam name="T">Òª»ñÈ¡·şÎñ¶ÔÏóµÄÀàĞÍ¡£</typeparam>
-        /// <param name="provider">´ÓÖĞÈ¡»Ø·şÎñ¶ÔÏóµÄ <see cref="IServiceProvider"/>¡£</param>
-        /// <returns>ÀàĞÍÎª <typeparamref name="T"/> µÄ·şÎñ¶ÔÏó»ò¿ÕÒıÓÃ£¨<c>null</c>£¬µ±Ã»ÓĞÕÒµ½·şÎñÊ±£©¡£</returns>
+        /// <typeparam name="T">è¦è·å–æœåŠ¡å¯¹è±¡çš„ç±»å‹ã€‚</typeparam>
+        /// <param name="provider">ä»ä¸­å–å›æœåŠ¡å¯¹è±¡çš„ <see cref="IServiceProvider"/>ã€‚</param>
+        /// <returns>ç±»å‹ä¸º <typeparamref name="T"/> çš„æœåŠ¡å¯¹è±¡æˆ–ç©ºå¼•ç”¨ï¼ˆ<c>null</c>ï¼Œå½“æ²¡æœ‰æ‰¾åˆ°æœåŠ¡æ—¶ï¼‰ã€‚</returns>
         public static T GetService<T>(this IServiceProvider provider)
         {
             if (provider == null)
@@ -29,12 +29,12 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// ´Ó <see cref="IServiceProvider"/> »ñÈ¡ <paramref name="serviceType"/> ÀàĞÍµÄ·şÎñ¡£
+        /// ä» <see cref="IServiceProvider"/> è·å– <paramref name="serviceType"/> ç±»å‹çš„æœåŠ¡ã€‚
         /// </summary>
-        /// <param name="provider">´ÓÖĞÈ¡»Ø·şÎñ¶ÔÏóµÄ <see cref="IServiceProvider"/>¡£</param>
-        /// <param name="serviceType">Òª»ñÈ¡·şÎñ¶ÔÏóµÄÀàĞÍ¡£</param>
-        /// <returns>ÀàĞÍÎª <paramref name="serviceType"/> µÄ·şÎñ¶ÔÏó¡£</returns>
-        /// <exception cref="System.InvalidOperationException">µ±ÕÒ²»µ½ <paramref name="serviceType"/> ÀàĞÍµÄ·şÎñÊ±Òı·¢¡£</exception>
+        /// <param name="provider">ä»ä¸­å–å›æœåŠ¡å¯¹è±¡çš„ <see cref="IServiceProvider"/>ã€‚</param>
+        /// <param name="serviceType">è¦è·å–æœåŠ¡å¯¹è±¡çš„ç±»å‹ã€‚</param>
+        /// <returns>ç±»å‹ä¸º <paramref name="serviceType"/> çš„æœåŠ¡å¯¹è±¡ã€‚</returns>
+        /// <exception cref="System.InvalidOperationException">å½“æ‰¾ä¸åˆ° <paramref name="serviceType"/> ç±»å‹çš„æœåŠ¡æ—¶å¼•å‘ã€‚</exception>
         public static object GetRequiredService(this IServiceProvider provider, Type serviceType)
         {
             if (provider == null)
@@ -63,12 +63,12 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// ´Ó <see cref="IServiceProvider"/> »ñÈ¡ <typeparamref name="T"/> ÀàĞÍµÄ·şÎñ¡£
+        /// ä» <see cref="IServiceProvider"/> è·å– <typeparamref name="T"/> ç±»å‹çš„æœåŠ¡ã€‚
         /// </summary>
-        /// <typeparam name="T">Òª»ñÈ¡·şÎñ¶ÔÏóµÄÀàĞÍ¡£</typeparam>
-        /// <param name="provider">´ÓÖĞÈ¡»Ø·şÎñ¶ÔÏóµÄ <see cref="IServiceProvider"/>¡£</param>
-        /// <returns>ÀàĞÍÎª <typeparamref name="T"/> µÄ·şÎñ¶ÔÏó¡£</returns>
-        /// <exception cref="System.InvalidOperationException">µ±ÕÒ²»µ½ <typeparamref name="T"/> ÀàĞÍµÄ·şÎñÊ±Òı·¢¡£</exception>
+        /// <typeparam name="T">è¦è·å–æœåŠ¡å¯¹è±¡çš„ç±»å‹ã€‚</typeparam>
+        /// <param name="provider">ä»ä¸­å–å›æœåŠ¡å¯¹è±¡çš„ <see cref="IServiceProvider"/>ã€‚</param>
+        /// <returns>ç±»å‹ä¸º <typeparamref name="T"/> çš„æœåŠ¡å¯¹è±¡ã€‚</returns>
+        /// <exception cref="System.InvalidOperationException">å½“æ‰¾ä¸åˆ° <typeparamref name="T"/> ç±»å‹çš„æœåŠ¡æ—¶å¼•å‘ã€‚</exception>
         public static T GetRequiredService<T>(this IServiceProvider provider)
         {
             if (provider == null)
@@ -80,11 +80,11 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// ´Ó <see cref="IServiceProvider"/> »ñÈ¡ <typeparamref name="T"/> ÀàĞÍµÄ·şÎñ¹¹³ÉµÄ¿ÉÃ¶¾ÙÊı¡£
+        /// ä» <see cref="IServiceProvider"/> è·å– <typeparamref name="T"/> ç±»å‹çš„æœåŠ¡æ„æˆçš„å¯æšä¸¾æ•°ã€‚
         /// </summary>
-        /// <typeparam name="T">Òª»ñÈ¡·şÎñ¶ÔÏóµÄÀàĞÍ¡£</typeparam>
-        /// <param name="provider">´ÓÖĞÈ¡»Ø·şÎñ¶ÔÏóµÄ <see cref="IServiceProvider"/>¡£</param>
-        /// <returns>ÀàĞÍÎª <typeparamref name="T"/> µÄ·şÎñ¹¹³ÉµÄÃ¶¾ÙÊı¡£</returns>
+        /// <typeparam name="T">è¦è·å–æœåŠ¡å¯¹è±¡çš„ç±»å‹ã€‚</typeparam>
+        /// <param name="provider">ä»ä¸­å–å›æœåŠ¡å¯¹è±¡çš„ <see cref="IServiceProvider"/>ã€‚</param>
+        /// <returns>ç±»å‹ä¸º <typeparamref name="T"/> çš„æœåŠ¡æ„æˆçš„æšä¸¾æ•°ã€‚</returns>
         public static IEnumerable<T> GetServices<T>(this IServiceProvider provider)
         {
             if (provider == null)
@@ -96,11 +96,11 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// ´Ó <see cref="IServiceProvider"/> »ñÈ¡ <paramref name="serviceType"/> ÀàĞÍµÄ·şÎñ¹¹³ÉµÄ¿ÉÃ¶¾ÙÊı¡£
+        /// ä» <see cref="IServiceProvider"/> è·å– <paramref name="serviceType"/> ç±»å‹çš„æœåŠ¡æ„æˆçš„å¯æšä¸¾æ•°ã€‚
         /// </summary>
-        /// <param name="provider">´ÓÖĞÈ¡»Ø·şÎñ¶ÔÏóµÄ <see cref="IServiceProvider"/>¡£</param>
-        /// <param name="serviceType">Òª»ñÈ¡·şÎñ¶ÔÏóµÄÀàĞÍ¡£</param>
-        /// <returns>ÀàĞÍÎª <paramref name="serviceType"/> µÄ·şÎñ¹¹³ÉµÄÃ¶¾ÙÊı¡£</returns>
+        /// <param name="provider">ä»ä¸­å–å›æœåŠ¡å¯¹è±¡çš„ <see cref="IServiceProvider"/>ã€‚</param>
+        /// <param name="serviceType">è¦è·å–æœåŠ¡å¯¹è±¡çš„ç±»å‹ã€‚</param>
+        /// <returns>ç±»å‹ä¸º <paramref name="serviceType"/> çš„æœåŠ¡æ„æˆçš„æšä¸¾æ•°ã€‚</returns>
         public static IEnumerable<object> GetServices(this IServiceProvider provider, Type serviceType)
         {
             if (provider == null)
@@ -118,10 +118,10 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// ´´½¨Ò»¸ö <see cref="IServiceScope"/>£¬Ëü¿ÉÒÔÓÃÀ´½âÎö·¶Î§·şÎñ¡£
+        /// åˆ›å»ºä¸€ä¸ª <see cref="IServiceScope"/>ï¼Œå®ƒå¯ä»¥ç”¨æ¥è§£æèŒƒå›´æœåŠ¡ã€‚
         /// </summary>
-        /// <param name="provider">´ÓÖĞ´´½¨·¶Î§µÄ <see cref="IServiceProvider"/>¡£</param>
-        /// <returns>¿ÉÒÔ±»ÓÃÀ´½âÎö·¶Î§·şÎñµÄ <see cref="IServiceScope"/>¡£</returns>
+        /// <param name="provider">ä»ä¸­åˆ›å»ºèŒƒå›´çš„ <see cref="IServiceProvider"/>ã€‚</param>
+        /// <returns>å¯ä»¥è¢«ç”¨æ¥è§£æèŒƒå›´æœåŠ¡çš„ <see cref="IServiceScope"/>ã€‚</returns>
         public static IServiceScope CreateScope(this IServiceProvider provider)
         {
             return provider.GetRequiredService<IServiceScopeFactory>().CreateScope();

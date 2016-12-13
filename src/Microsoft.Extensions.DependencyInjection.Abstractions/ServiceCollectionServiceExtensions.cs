@@ -6,19 +6,19 @@ using System;
 namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
-    /// Ìí¼Ó·þÎñµ½ <see cref="IServiceCollection" /> µÄÀ©Õ¹·½·¨¡£
+    /// æ·»åŠ æœåŠ¡åˆ° <see cref="IServiceCollection" /> çš„æ‰©å±•æ–¹æ³•ã€‚
     /// </summary>
     public static class ServiceCollectionServiceExtensions
     {
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <paramref name="serviceType"/> µÄË²Ê±·þÎñµ½Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ£¬
-        /// ²¢ÓÉ <paramref name="implementationType"/> Ö¸¶¨ÆäÊµÏÖÀàÐÍ¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <paramref name="serviceType"/> çš„çž¬æ—¶æœåŠ¡åˆ°æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ï¼Œ
+        /// å¹¶ç”± <paramref name="implementationType"/> æŒ‡å®šå…¶å®žçŽ°ç±»åž‹ã€‚
         /// 
         /// </summary>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <param name="serviceType">½«×¢²áµÄ·þÎñÀàÐÍ¡£</param>
-        /// <param name="implementationType">·þÎñµÄÊµÏÖÀàÐÍ¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <param name="serviceType">å°†æ³¨å†Œçš„æœåŠ¡ç±»åž‹ã€‚</param>
+        /// <param name="implementationType">æœåŠ¡çš„å®žçŽ°ç±»åž‹ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Transient"/>
         public static IServiceCollection AddTransient(
             this IServiceCollection services,
@@ -44,14 +44,14 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <paramref name="serviceType"/> µÄË²Ê±·þÎñµ½Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ£¬
-        /// ²¢ÓÉ <paramref name="implementationFactory"/> Ö¸¶¨ÆäÊµÏÖµÄ¹¤³§¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <paramref name="serviceType"/> çš„çž¬æ—¶æœåŠ¡åˆ°æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ï¼Œ
+        /// å¹¶ç”± <paramref name="implementationFactory"/> æŒ‡å®šå…¶å®žçŽ°çš„å·¥åŽ‚ã€‚
         /// 
         /// </summary>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <param name="serviceType">½«×¢²áµÄ·þÎñÀàÐÍ¡£</param>
-        /// <param name="implementationFactory">´´½¨·þÎñµÄ¹¤³§¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <param name="serviceType">å°†æ³¨å†Œçš„æœåŠ¡ç±»åž‹ã€‚</param>
+        /// <param name="implementationFactory">åˆ›å»ºæœåŠ¡çš„å·¥åŽ‚ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Transient"/>
         public static IServiceCollection AddTransient(
             this IServiceCollection services,
@@ -77,14 +77,14 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <typeparamref name="TService"/> µÄË²Ê±·þÎñµ½Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ£¬
-        /// ²¢ÓÉ <typeparamref name="TImplementation"/> Ö¸¶¨ÆäÊµÏÖÀàÐÍ¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <typeparamref name="TService"/> çš„çž¬æ—¶æœåŠ¡åˆ°æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ï¼Œ
+        /// å¹¶ç”± <typeparamref name="TImplementation"/> æŒ‡å®šå…¶å®žçŽ°ç±»åž‹ã€‚
         /// 
         /// </summary>
-        /// <typeparam name="TService">½«Ìí¼ÓµÄ·þÎñÀàÐÍ¡£</typeparam>
-        /// <typeparam name="TImplementation">ÓÃÀ´ÊµÏÖ·þÎñµÄÀàÐÍ¡£</typeparam>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <typeparam name="TService">å°†æ·»åŠ çš„æœåŠ¡ç±»åž‹ã€‚</typeparam>
+        /// <typeparam name="TImplementation">ç”¨æ¥å®žçŽ°æœåŠ¡çš„ç±»åž‹ã€‚</typeparam>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Transient"/>
         public static IServiceCollection AddTransient<TService, TImplementation>(this IServiceCollection services)
             where TService : class
@@ -99,12 +99,12 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <paramref name="serviceType"/> µÄË²Ê±·þÎñµ½
-        /// Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <paramref name="serviceType"/> çš„çž¬æ—¶æœåŠ¡åˆ°
+        /// æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ã€‚
         /// </summary>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <param name="serviceType">ÓÃÀ´×¢²áºÍÊµÏÖ·þÎñµÄÀàÐÍ¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <param name="serviceType">ç”¨æ¥æ³¨å†Œå’Œå®žçŽ°æœåŠ¡çš„ç±»åž‹ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Transient"/>
         public static IServiceCollection AddTransient(
             this IServiceCollection services,
@@ -124,12 +124,12 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <typeparamref name="TService"/> µÄË²Ê±·þÎñµ½
-        /// Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <typeparamref name="TService"/> çš„çž¬æ—¶æœåŠ¡åˆ°
+        /// æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ã€‚
         /// </summary>
-        /// <typeparam name="TService">½«ÒªÌí¼ÓµÄ·þÎñÀàÐÍ¡£</typeparam>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <typeparam name="TService">å°†è¦æ·»åŠ çš„æœåŠ¡ç±»åž‹ã€‚</typeparam>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Transient"/>
         public static IServiceCollection AddTransient<TService>(this IServiceCollection services)
             where TService : class
@@ -143,14 +143,14 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <typeparamref name="TService"/> µÄË²Ê±·þÎñµ½Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ£¬
-        /// ²¢ÓÉ <paramref name="implementationFactory"/> Ö¸¶¨ÆäÊµÏÖµÄ¹¤³§¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <typeparamref name="TService"/> çš„çž¬æ—¶æœåŠ¡åˆ°æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ï¼Œ
+        /// å¹¶ç”± <paramref name="implementationFactory"/> æŒ‡å®šå…¶å®žçŽ°çš„å·¥åŽ‚ã€‚
         /// 
         /// </summary>
-        /// <typeparam name="TService">½«Ìí¼ÓµÄ·þÎñÀàÐÍ¡£</typeparam>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <param name="implementationFactory">´´½¨·þÎñµÄ¹¤³§¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <typeparam name="TService">å°†æ·»åŠ çš„æœåŠ¡ç±»åž‹ã€‚</typeparam>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <param name="implementationFactory">åˆ›å»ºæœåŠ¡çš„å·¥åŽ‚ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Transient"/>
         public static IServiceCollection AddTransient<TService>(
             this IServiceCollection services,
@@ -171,16 +171,16 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <typeparamref name="TService"/> µÄË²Ê±·þÎñµ½Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ£¬
-        /// ²¢ÓÉ <typeparamref name="TImplementation" /> Ö¸¶¨ÆäÊµÏÖÀàÐÍ£¬
-        /// ÓÉ <paramref name="implementationFactory"/> Ö¸¶¨ÆäÊµÏÖµÄ¹¤³§¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <typeparamref name="TService"/> çš„çž¬æ—¶æœåŠ¡åˆ°æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ï¼Œ
+        /// å¹¶ç”± <typeparamref name="TImplementation" /> æŒ‡å®šå…¶å®žçŽ°ç±»åž‹ï¼Œ
+        /// ç”± <paramref name="implementationFactory"/> æŒ‡å®šå…¶å®žçŽ°çš„å·¥åŽ‚ã€‚
         /// 
         /// </summary>
-        /// <typeparam name="TService">½«Ìí¼ÓµÄ·þÎñÀàÐÍ¡£</typeparam>
-        /// <typeparam name="TImplementation">ÓÃÀ´ÊµÏÖ·þÎñµÄÀàÐÍ¡£</typeparam>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <param name="implementationFactory">´´½¨·þÎñµÄ¹¤³§¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <typeparam name="TService">å°†æ·»åŠ çš„æœåŠ¡ç±»åž‹ã€‚</typeparam>
+        /// <typeparam name="TImplementation">ç”¨æ¥å®žçŽ°æœåŠ¡çš„ç±»åž‹ã€‚</typeparam>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <param name="implementationFactory">åˆ›å»ºæœåŠ¡çš„å·¥åŽ‚ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Transient"/>
         public static IServiceCollection AddTransient<TService, TImplementation>(
             this IServiceCollection services,
@@ -204,14 +204,14 @@ namespace Microsoft.Extensions.DependencyInjection
 
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <paramref name="serviceType"/> µÄ×÷ÓÃÓò·þÎñµ½Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ£¬
-        /// ²¢ÓÉ <paramref name="implementationType"/> Ö¸¶¨ÆäÊµÏÖÀàÐÍ¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <paramref name="serviceType"/> çš„ä½œç”¨åŸŸæœåŠ¡åˆ°æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ï¼Œ
+        /// å¹¶ç”± <paramref name="implementationType"/> æŒ‡å®šå…¶å®žçŽ°ç±»åž‹ã€‚
         /// 
         /// </summary>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <param name="serviceType">½«×¢²áµÄ·þÎñÀàÐÍ¡£</param>
-        /// <param name="implementationType">·þÎñµÄÊµÏÖÀàÐÍ¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <param name="serviceType">å°†æ³¨å†Œçš„æœåŠ¡ç±»åž‹ã€‚</param>
+        /// <param name="implementationType">æœåŠ¡çš„å®žçŽ°ç±»åž‹ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Scoped"/>
         public static IServiceCollection AddScoped(
             this IServiceCollection services,
@@ -237,14 +237,14 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <paramref name="serviceType"/> µÄ×÷ÓÃÓò·þÎñµ½Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ£¬
-        /// ²¢ÓÉ <paramref name="implementationFactory"/> Ö¸¶¨ÆäÊµÏÖµÄ¹¤³§¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <paramref name="serviceType"/> çš„ä½œç”¨åŸŸæœåŠ¡åˆ°æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ï¼Œ
+        /// å¹¶ç”± <paramref name="implementationFactory"/> æŒ‡å®šå…¶å®žçŽ°çš„å·¥åŽ‚ã€‚
         /// 
         /// </summary>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <param name="serviceType">½«×¢²áµÄ·þÎñÀàÐÍ¡£</param>
-        /// <param name="implementationFactory">´´½¨·þÎñµÄ¹¤³§¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <param name="serviceType">å°†æ³¨å†Œçš„æœåŠ¡ç±»åž‹ã€‚</param>
+        /// <param name="implementationFactory">åˆ›å»ºæœåŠ¡çš„å·¥åŽ‚ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Scoped"/>
         public static IServiceCollection AddScoped(
             this IServiceCollection services,
@@ -270,14 +270,14 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <typeparamref name="TService"/> µÄ×÷ÓÃÓò·þÎñµ½Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ£¬
-        /// ²¢ÓÉ <typeparamref name="TImplementation"/> Ö¸¶¨ÆäÊµÏÖÀàÐÍ¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <typeparamref name="TService"/> çš„ä½œç”¨åŸŸæœåŠ¡åˆ°æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ï¼Œ
+        /// å¹¶ç”± <typeparamref name="TImplementation"/> æŒ‡å®šå…¶å®žçŽ°ç±»åž‹ã€‚
         /// 
         /// </summary>
-        /// <typeparam name="TService">½«Ìí¼ÓµÄ·þÎñÀàÐÍ¡£</typeparam>
-        /// <typeparam name="TImplementation">ÓÃÀ´ÊµÏÖ·þÎñµÄÀàÐÍ¡£</typeparam>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <typeparam name="TService">å°†æ·»åŠ çš„æœåŠ¡ç±»åž‹ã€‚</typeparam>
+        /// <typeparam name="TImplementation">ç”¨æ¥å®žçŽ°æœåŠ¡çš„ç±»åž‹ã€‚</typeparam>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Scoped"/>
         public static IServiceCollection AddScoped<TService, TImplementation>(this IServiceCollection services)
             where TService : class
@@ -292,12 +292,12 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <paramref name="serviceType"/> µÄ×÷ÓÃÓò·þÎñµ½
-        /// Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <paramref name="serviceType"/> çš„ä½œç”¨åŸŸæœåŠ¡åˆ°
+        /// æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ã€‚
         /// </summary>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <param name="serviceType">ÓÃÀ´×¢²áºÍÊµÏÖ·þÎñµÄÀàÐÍ¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <param name="serviceType">ç”¨æ¥æ³¨å†Œå’Œå®žçŽ°æœåŠ¡çš„ç±»åž‹ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Scoped"/>
         public static IServiceCollection AddScoped(
             this IServiceCollection services,
@@ -317,12 +317,12 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <typeparamref name="TService"/> µÄ×÷ÓÃÓò·þÎñµ½
-        /// Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <typeparamref name="TService"/> çš„ä½œç”¨åŸŸæœåŠ¡åˆ°
+        /// æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ã€‚
         /// </summary>
-        /// <typeparam name="TService">½«ÒªÌí¼ÓµÄ·þÎñÀàÐÍ¡£</typeparam>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <typeparam name="TService">å°†è¦æ·»åŠ çš„æœåŠ¡ç±»åž‹ã€‚</typeparam>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Scoped"/>
         public static IServiceCollection AddScoped<TService>(this IServiceCollection services)
             where TService : class
@@ -336,14 +336,14 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <typeparamref name="TService"/> µÄ×÷ÓÃÓò·þÎñµ½Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ£¬
-        /// ²¢ÓÉ <paramref name="implementationFactory"/> Ö¸¶¨ÆäÊµÏÖµÄ¹¤³§¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <typeparamref name="TService"/> çš„ä½œç”¨åŸŸæœåŠ¡åˆ°æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ï¼Œ
+        /// å¹¶ç”± <paramref name="implementationFactory"/> æŒ‡å®šå…¶å®žçŽ°çš„å·¥åŽ‚ã€‚
         /// 
         /// </summary>
-        /// <typeparam name="TService">½«Ìí¼ÓµÄ·þÎñÀàÐÍ¡£</typeparam>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <param name="implementationFactory">´´½¨·þÎñµÄ¹¤³§¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <typeparam name="TService">å°†æ·»åŠ çš„æœåŠ¡ç±»åž‹ã€‚</typeparam>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <param name="implementationFactory">åˆ›å»ºæœåŠ¡çš„å·¥åŽ‚ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Scoped"/>
         public static IServiceCollection AddScoped<TService>(
             this IServiceCollection services,
@@ -364,16 +364,16 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <typeparamref name="TService"/> µÄ×÷ÓÃÓò·þÎñµ½Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ£¬
-        /// ²¢ÓÉ <typeparamref name="TImplementation" /> Ö¸¶¨ÆäÊµÏÖÀàÐÍ£¬
-        /// ÓÉ <paramref name="implementationFactory"/> Ö¸¶¨ÆäÊµÏÖµÄ¹¤³§¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <typeparamref name="TService"/> çš„ä½œç”¨åŸŸæœåŠ¡åˆ°æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ï¼Œ
+        /// å¹¶ç”± <typeparamref name="TImplementation" /> æŒ‡å®šå…¶å®žçŽ°ç±»åž‹ï¼Œ
+        /// ç”± <paramref name="implementationFactory"/> æŒ‡å®šå…¶å®žçŽ°çš„å·¥åŽ‚ã€‚
         /// 
         /// </summary>
-        /// <typeparam name="TService">½«Ìí¼ÓµÄ·þÎñÀàÐÍ¡£</typeparam>
-        /// <typeparam name="TImplementation">ÓÃÀ´ÊµÏÖ·þÎñµÄÀàÐÍ¡£</typeparam>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <param name="implementationFactory">´´½¨·þÎñµÄ¹¤³§¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <typeparam name="TService">å°†æ·»åŠ çš„æœåŠ¡ç±»åž‹ã€‚</typeparam>
+        /// <typeparam name="TImplementation">ç”¨æ¥å®žçŽ°æœåŠ¡çš„ç±»åž‹ã€‚</typeparam>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <param name="implementationFactory">åˆ›å»ºæœåŠ¡çš„å·¥åŽ‚ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Scoped"/>
         public static IServiceCollection AddScoped<TService, TImplementation>(
             this IServiceCollection services,
@@ -396,14 +396,14 @@ namespace Microsoft.Extensions.DependencyInjection
 
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <paramref name="serviceType"/> µÄµ¥Àý·þÎñµ½Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ£¬
-        /// ²¢ÓÉ <paramref name="implementationType"/> Ö¸¶¨ÆäÊµÏÖÀàÐÍ¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <paramref name="serviceType"/> çš„å•ä¾‹æœåŠ¡åˆ°æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ï¼Œ
+        /// å¹¶ç”± <paramref name="implementationType"/> æŒ‡å®šå…¶å®žçŽ°ç±»åž‹ã€‚
         /// 
         /// </summary>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <param name="serviceType">½«×¢²áµÄ·þÎñÀàÐÍ¡£</param>
-        /// <param name="implementationType">·þÎñµÄÊµÏÖÀàÐÍ¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <param name="serviceType">å°†æ³¨å†Œçš„æœåŠ¡ç±»åž‹ã€‚</param>
+        /// <param name="implementationType">æœåŠ¡çš„å®žçŽ°ç±»åž‹ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Singleton"/>
         public static IServiceCollection AddSingleton(
             this IServiceCollection services,
@@ -429,14 +429,14 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <paramref name="serviceType"/> µÄµ¥Àý·þÎñµ½Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ£¬
-        /// ²¢ÓÉ <paramref name="implementationFactory"/> Ö¸¶¨ÆäÊµÏÖµÄ¹¤³§¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <paramref name="serviceType"/> çš„å•ä¾‹æœåŠ¡åˆ°æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ï¼Œ
+        /// å¹¶ç”± <paramref name="implementationFactory"/> æŒ‡å®šå…¶å®žçŽ°çš„å·¥åŽ‚ã€‚
         /// 
         /// </summary>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <param name="serviceType">½«×¢²áµÄ·þÎñÀàÐÍ¡£</param>
-        /// <param name="implementationFactory">´´½¨·þÎñµÄ¹¤³§¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <param name="serviceType">å°†æ³¨å†Œçš„æœåŠ¡ç±»åž‹ã€‚</param>
+        /// <param name="implementationFactory">åˆ›å»ºæœåŠ¡çš„å·¥åŽ‚ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Singleton"/>
         public static IServiceCollection AddSingleton(
             this IServiceCollection services,
@@ -462,14 +462,14 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <typeparamref name="TService"/> µÄµ¥Àý·þÎñµ½Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ£¬
-        /// ²¢ÓÉ <typeparamref name="TImplementation"/> Ö¸¶¨ÆäÊµÏÖÀàÐÍ¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <typeparamref name="TService"/> çš„å•ä¾‹æœåŠ¡åˆ°æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ï¼Œ
+        /// å¹¶ç”± <typeparamref name="TImplementation"/> æŒ‡å®šå…¶å®žçŽ°ç±»åž‹ã€‚
         /// 
         /// </summary>
-        /// <typeparam name="TService">½«Ìí¼ÓµÄ·þÎñÀàÐÍ¡£</typeparam>
-        /// <typeparam name="TImplementation">ÓÃÀ´ÊµÏÖ·þÎñµÄÀàÐÍ¡£</typeparam>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <typeparam name="TService">å°†æ·»åŠ çš„æœåŠ¡ç±»åž‹ã€‚</typeparam>
+        /// <typeparam name="TImplementation">ç”¨æ¥å®žçŽ°æœåŠ¡çš„ç±»åž‹ã€‚</typeparam>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Singleton"/>
         public static IServiceCollection AddSingleton<TService, TImplementation>(this IServiceCollection services)
             where TService : class
@@ -484,12 +484,12 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <paramref name="serviceType"/> µÄµ¥Àý·þÎñµ½
-        /// Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <paramref name="serviceType"/> çš„å•ä¾‹æœåŠ¡åˆ°
+        /// æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ã€‚
         /// </summary>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <param name="serviceType">ÓÃÀ´×¢²áºÍÊµÏÖ·þÎñµÄÀàÐÍ¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <param name="serviceType">ç”¨æ¥æ³¨å†Œå’Œå®žçŽ°æœåŠ¡çš„ç±»åž‹ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Singleton"/>
         public static IServiceCollection AddSingleton(
             this IServiceCollection services,
@@ -509,12 +509,12 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <typeparamref name="TService"/> µÄµ¥Àý·þÎñµ½
-        /// Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <typeparamref name="TService"/> çš„å•ä¾‹æœåŠ¡åˆ°
+        /// æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ã€‚
         /// </summary>
-        /// <typeparam name="TService">½«ÒªÌí¼ÓµÄ·þÎñÀàÐÍ¡£</typeparam>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <typeparam name="TService">å°†è¦æ·»åŠ çš„æœåŠ¡ç±»åž‹ã€‚</typeparam>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Singleton"/>
         public static IServiceCollection AddSingleton<TService>(this IServiceCollection services)
             where TService : class
@@ -528,14 +528,14 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <typeparamref name="TService"/> µÄµ¥Àý·þÎñµ½Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ£¬
-        /// ²¢ÓÉ <paramref name="implementationFactory"/> Ö¸¶¨ÆäÊµÏÖµÄ¹¤³§¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <typeparamref name="TService"/> çš„å•ä¾‹æœåŠ¡åˆ°æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ï¼Œ
+        /// å¹¶ç”± <paramref name="implementationFactory"/> æŒ‡å®šå…¶å®žçŽ°çš„å·¥åŽ‚ã€‚
         /// 
         /// </summary>
-        /// <typeparam name="TService">½«Ìí¼ÓµÄ·þÎñÀàÐÍ¡£</typeparam>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <param name="implementationFactory">´´½¨·þÎñµÄ¹¤³§¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <typeparam name="TService">å°†æ·»åŠ çš„æœåŠ¡ç±»åž‹ã€‚</typeparam>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <param name="implementationFactory">åˆ›å»ºæœåŠ¡çš„å·¥åŽ‚ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Singleton"/>
         public static IServiceCollection AddSingleton<TService>(
             this IServiceCollection services,
@@ -556,16 +556,16 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <typeparamref name="TService"/> µÄµ¥Àý·þÎñµ½Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ£¬
-        /// ²¢ÓÉ <typeparamref name="TImplementation" /> Ö¸¶¨ÆäÊµÏÖÀàÐÍ£¬
-        /// ÓÉ <paramref name="implementationFactory"/> Ö¸¶¨ÆäÊµÏÖµÄ¹¤³§¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <typeparamref name="TService"/> çš„å•ä¾‹æœåŠ¡åˆ°æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ï¼Œ
+        /// å¹¶ç”± <typeparamref name="TImplementation" /> æŒ‡å®šå…¶å®žçŽ°ç±»åž‹ï¼Œ
+        /// ç”± <paramref name="implementationFactory"/> æŒ‡å®šå…¶å®žçŽ°çš„å·¥åŽ‚ã€‚
         /// 
         /// </summary>
-        /// <typeparam name="TService">½«Ìí¼ÓµÄ·þÎñÀàÐÍ¡£</typeparam>
-        /// <typeparam name="TImplementation">ÓÃÀ´ÊµÏÖ·þÎñµÄÀàÐÍ¡£</typeparam>
-        /// <param name="services">ÓÃÀ´ÊµÏÖ·þÎñµÄÀàÐÍ¡£</param>
-        /// <param name="implementationFactory">´´½¨·þÎñµÄ¹¤³§¡£</param>
-        /// <returns>´´½¨·þÎñµÄ¹¤³§¡£</returns>
+        /// <typeparam name="TService">å°†æ·»åŠ çš„æœåŠ¡ç±»åž‹ã€‚</typeparam>
+        /// <typeparam name="TImplementation">ç”¨æ¥å®žçŽ°æœåŠ¡çš„ç±»åž‹ã€‚</typeparam>
+        /// <param name="services">ç”¨æ¥å®žçŽ°æœåŠ¡çš„ç±»åž‹ã€‚</param>
+        /// <param name="implementationFactory">åˆ›å»ºæœåŠ¡çš„å·¥åŽ‚ã€‚</param>
+        /// <returns>åˆ›å»ºæœåŠ¡çš„å·¥åŽ‚ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Singleton"/>
         public static IServiceCollection AddSingleton<TService, TImplementation>(
             this IServiceCollection services,
@@ -587,14 +587,14 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <paramref name="serviceType"/> µÄµ¥Àý·þÎñµ½Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ¡£
-        /// ²¢ÓÉ <paramref name="implementationInstance"/> Ö¸¶¨ÆäÊµÏÖÊµÀý¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <paramref name="serviceType"/> çš„å•ä¾‹æœåŠ¡åˆ°æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ã€‚
+        /// å¹¶ç”± <paramref name="implementationInstance"/> æŒ‡å®šå…¶å®žçŽ°å®žä¾‹ã€‚
         /// 
         /// </summary>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <param name="serviceType">½«×¢²áµÄ·þÎñÀàÐÍ¡£</param>
-        /// <param name="implementationInstance">·þÎñµÄÊµÀý¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <param name="serviceType">å°†æ³¨å†Œçš„æœåŠ¡ç±»åž‹ã€‚</param>
+        /// <param name="implementationInstance">æœåŠ¡çš„å®žä¾‹ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Singleton"/>
         public static IServiceCollection AddSingleton(
             this IServiceCollection services,
@@ -622,14 +622,14 @@ namespace Microsoft.Extensions.DependencyInjection
         }
 
         /// <summary>
-        /// Ìí¼ÓÒ»¸öÀàÐÍÎª <typeparamref name="TService"/> µÄµ¥Àý·þÎñµ½Ö¸¶¨ <see cref="IServiceCollection"/> ÖÐ£¬
-        /// ²¢ÓÉ <paramref name="implementationInstance"/> Ö¸¶¨ÆäÊµÏÖÊµÀý¡£
+        /// æ·»åŠ ä¸€ä¸ªç±»åž‹ä¸º <typeparamref name="TService"/> çš„å•ä¾‹æœåŠ¡åˆ°æŒ‡å®š <see cref="IServiceCollection"/> ä¸­ï¼Œ
+        /// å¹¶ç”± <paramref name="implementationInstance"/> æŒ‡å®šå…¶å®žçŽ°å®žä¾‹ã€‚
         /// 
         /// </summary>
-        /// <typeparam name="TService">½«Ìí¼ÓµÄ·þÎñÀàÐÍ¡£</typeparam>
-        /// <param name="services">ÓÃÀ´Ìí¼Ó·þÎñµÄ <see cref="IServiceCollection"/>¡£</param>
-        /// <param name="implementationInstance">·þÎñµÄÊµÀý¡£</param>
-        /// <returns>²Ù×÷Íê³Éºóµ±Ç°ÊµÀýµÄÒýÓÃ¡£</returns>
+        /// <typeparam name="TService">å°†æ·»åŠ çš„æœåŠ¡ç±»åž‹ã€‚</typeparam>
+        /// <param name="services">ç”¨æ¥æ·»åŠ æœåŠ¡çš„ <see cref="IServiceCollection"/>ã€‚</param>
+        /// <param name="implementationInstance">æœåŠ¡çš„å®žä¾‹ã€‚</param>
+        /// <returns>æ“ä½œå®ŒæˆåŽå½“å‰å®žä¾‹çš„å¼•ç”¨ã€‚</returns>
         /// <seealso cref="ServiceLifetime.Singleton"/>
         public static IServiceCollection AddSingleton<TService>(
             this IServiceCollection services,
